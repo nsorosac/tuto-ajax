@@ -19,7 +19,7 @@
                 "data": $login_form.serialize()
             })
 
-                .then(function (response) {
+                .done(function (response) {
                     if (response.success && response.data) {
                         addAlert('Login successful', 'success');
                     } else {
@@ -46,7 +46,7 @@
             "dataType": "json"
         })
 
-            .then(function (response) {
+            .done(function (response) {
                 if (response.success && response.data) {
                     var posts = response.data;
                     $.each(posts, function (i, post) {
@@ -77,17 +77,16 @@
         // Remote //
         ////////////
 
-        /*var $remote = $('#remote');
+        var $remote = $('#remote');
 
         $.ajax({
             "url": $remote.data('url'),
             "method": "POST",
-            "dataType": "json",
-            // "dataType": "jsonp",
-            // "cache": "true",
+            "dataType": "jsonp",
+            "cache": "true"
         })
 
-            .then(function (response) {
+            .done(function (response) {
                 if (response.success && response.data) {
                     $remote.append(response.data);
                 } else {
@@ -97,7 +96,7 @@
 
             .fail(function () {
                 addAlert('Remote connection error', 'danger');
-            });*/
+            });
 
     });
 
