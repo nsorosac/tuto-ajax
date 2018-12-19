@@ -1,0 +1,32 @@
+#newsfeed {
+	min-height: 100px;
+	max-height: 90vh;
+	overflow: auto;
+}
+
+#newsfeed:empty {
+	background: url(../img/ajax-loader.gif) no-repeat 50% 0;
+}
+
+.media-list {
+	padding-right: 30px;
+}
+
+.media + .media {
+	border-top: 1px solid #eee;
+	padding-top: 30px;
+}
+
+#alerts {
+	position: fixed;
+	top: 0;
+	right: 0;
+	padding: 15px;
+}
+
+.alert i {
+	font-size: 1.5em;
+	display: inline-block;
+	vertical-align: text-top;
+	margin: -0.2em 0.5em 0 0;
+}
